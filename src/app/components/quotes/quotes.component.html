@@ -1,0 +1,8 @@
+<div class="quote-container">
+  <button (click)="loadQuote()">New Quote</button>
+
+  @if (quote) {
+    <blockquote>"{{ quote.q }}"</blockquote>
+    <p>— {{ quote.a }}</p>
+  }
+</div>
