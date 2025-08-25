@@ -3,20 +3,22 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export interface Quote {
-  q: string; // the quote text
-  a: string; // the author
+  quote: string;  // the quote text
+  author: string;  // the author
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuotesService {
-
-  private apiUrl = 'https://zenquotes.io/api/random'; // Free motivational quotes API
+  // API endpoint
+  private apiUrl = 'https://quoteslate.vercel.app/api/quotes/random'; 
 
   constructor(private http: HttpClient) {}
 
-  getRandomQuote(): Observable<Quote[]> {
-    return this.http.get<Quote[]>(this.apiUrl);
+  // Fetch a random quote from the API
+  getRandomQuote(): Observable<Quote> {
+    return this.http.get<Quote>(this.apiUrl);
   }
 }
+

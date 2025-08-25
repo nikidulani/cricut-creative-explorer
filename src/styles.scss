@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+
+/* Global reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #f5e6d3, #d7ccc8, #efebe9);
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* Center everything vertically with padding */
+app-root {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Title style (global in case we reuse it) */
+.app-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}

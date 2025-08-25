@@ -6,6 +6,7 @@ const routes: Routes = [
     { path: '', component: QuotesComponent } // default route
 ];
 
+// Routing module
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

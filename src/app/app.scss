@@ -1,0 +1,50 @@
+.app-title {
+  font-size: 2.8rem;
+  font-family: 'Cinzel Decorative', serif;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+
+  /* Gradient gold + rose gold shimmer */
+  background: linear-gradient(
+    90deg,
+    #b8860b,   /* dark goldenrod */
+    #daa520,   /* golden yellow */
+    #ffd700,   /* bright gold */
+    #ffb347,   /* warm amber/rose gold */
+    #b8860b
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Underline effect with same gradient */
+.app-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    #b8860b,
+    #daa520,
+    #ffd700,
+    #ffb347,
+    #b8860b
+  );
+  background-size: 300% auto;
+  animation: shimmer 6s linear infinite;
+}
+
+/* shimmer animation */
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 300% center; }
+}

@@ -1,8 +1,18 @@
-<div class="quote-container">
-  <button (click)="loadQuote()">New Quote</button>
+<div *ngIf="!quote">⏳ Loading...</div>
 
-  @if (quote) {
-    <blockquote>"{{ quote.q }}"</blockquote>
-    <p>— {{ quote.a }}</p>
-  }
+<div class="quote-box" *ngIf="quote">
+  <blockquote>“{{ quote.quote }}”</blockquote>
+  <p>— {{ quote.author }}</p>
+
+  <div class="actions">
+    <button (click)="loadQuote()">✨ New Quote</button>
+    <button (click)="shareQuote()">📢 Share</button>
+    <button (click)="copyQuote()">📋 Copy</button>
+  </div>
+
+  <!-- Fallback share buttons -->
+  <div class="fallback-share">
+    <a [href]="twitterLink" target="_blank" rel="noopener">🐦 Tweet</a>
+    <a [href]="facebookLink" target="_blank" rel="noopener">📘 Facebook</a>
+  </div>
 </div>
