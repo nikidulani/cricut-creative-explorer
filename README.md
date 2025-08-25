@@ -1,6 +1,10 @@
 # CricutCreativeExplorer
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+This project will display the inspirational quotes fetched from a API
+Users can click new quote button to fetch a new random quote
+Users can share this quote with a share button, tweet button or post on facebook button.
+Users can copy it to the clipboard.
 
 ## Development server
 
